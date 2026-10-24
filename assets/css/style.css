@@ -139,13 +139,39 @@ body {
 }
 .site-footer__help a { color: var(--color-primary); font-weight: 700; }
 .site-footer__note { margin-top: var(--space-sm); }
+/* 下のメニュー:ボタンを縦に並べる。1つ目(特典の一覧)は、一覧に戻る大きいボタンにする */
 .site-footer__nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0 var(--space-lg);
-  margin-top: var(--space-lg);
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 420px;
+  margin: var(--space-lg) auto 0;
 }
-.site-footer__nav a { display: inline-flex; align-items: center; min-height: var(--tap-min); color: var(--color-primary); }
+.site-footer__nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 1.5px var(--color-primary) inset;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.site-footer__nav a:first-child {
+  min-height: 60px;
+  font-size: var(--fs-h3);
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 3px 0 var(--color-secondary), 0 8px 14px -6px rgba(0, 0, 0, .3);
+}
+.site-footer__nav a:first-child::before { content: "←"; }
+.site-footer__nav a:first-child:hover { transform: translateY(-1px); }
+.site-footer__nav a:first-child:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--color-secondary); }
 .site-footer__copy { margin-top: var(--space-sm); font-size: var(--fs-xs); }
 
 /* ---- 3) トップページ ---- */
