@@ -15,11 +15,15 @@
 | .nojekyll | GitHub Pages の変換を止める空ファイル。消さない |
 
 ## GitHub Pages で公開する
-1. まもる専用のGitHubアカウントで、リポジトリを作る。名前を `アカウント名.github.io` にすると、URLが `https://アカウント名.github.io/` になる(別の名前なら `https://アカウント名.github.io/リポジトリ名/`)
-2. このフォルダの**中身**をすべてアップロードする(`.nojekyll` も含める)
-3. リポジトリの Settings → Pages → 「Deploy from a branch」→ ブランチ `main`、フォルダ `/(root)` → Save
-4. 数分後、上のURLで開けるか確かめる
-5. URLが決まったら、各HTMLの `og:image` を `https://〜/assets/img/ogp.jpg` のような絶対URLに書き換える(LINEのプレビューは相対パスだと出ないことがある)
+公開URL:https://mamoru-worklife.github.io/
+置き場所:Organization `mamoru-worklife` のリポジトリ `mamoru-worklife.github.io`(takenoco0201 でログインして管理。Settings → Pages は ブランチ `main`、フォルダ `/(root)`)
+
+更新する時
+1. リポジトリのページで「Add file」→「Upload files」
+2. 直したファイルを、このフォルダと同じ場所にドラッグ&ドロップする(同じ名前のファイルは上書きされる)
+3. 「Commit changes」を押し、数分後に公開URLで確かめる
+
+各HTMLの `og:url` と `og:image` は、公開URLの絶対URLにしている(LINEのプレビューは相対パスだと出ないことがある)。新しいページでも同じにする。
 
 検索エンジンには出さない設定(`<meta name="robots" content="noindex, nofollow">`)を全ページに入れています。新しいページにも必ず入れてください。
 
