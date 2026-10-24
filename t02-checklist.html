@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>特典② 受診の目安と、10の確認リスト | まもるの参加特典</title>
+<meta name="description" content="受診の目安と、会社がしんどい時の10の確認リストです。チェックは自動で保存されます。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="特典② 受診の目安と、10の確認リスト">
+<meta property="og:image" content="assets/img/ogp.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<!-- data-tokuten は保存の名前。ページごとに変える(t02 なら mamoru:t02:v1 に保存される) -->
+<body data-tokuten="t02">
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="index.html"><img src="favicon.svg" alt="" width="28" height="28">まもるの参加特典</a>
+    <a class="site-header__link" href="backup.html">バックアップ</a>
+  </div>
+</header>
+
+<main class="container">
+  <p id="notice-storage" class="notice" hidden>このブラウザでは、チェックを保存できません。<a href="backup.html">バックアップ</a>の方法をご覧ください。</p>
+  <p id="notice-line" class="notice" hidden>LINEの中で開いています。チェックを残すには、<a id="open-external" href="#">Safari・Chromeで開き直す</a>のがおすすめです。</p>
+
+  <a class="back-link" href="index.html">← 特典の一覧へ</a>
+
+  <div class="page-head">
+    <div class="page-head__media"><img src="assets/img/thumbs/t02.webp" alt="" width="1280" height="720"></div>
+    <span class="page-head__no">特典②</span>
+    <h1 class="page-head__title">受診の目安と、10の確認リスト</h1>
+  </div>
+
+  <section class="section">
+    <h2 class="section__title"><img class="section__icon float" src="assets/img/t02/clinic.webp" alt="" width="512" height="512" loading="lazy">受診の目安</h2>
+    <div class="box anim">
+      <p>日常生活に支障が出るほどの状態が2週間前後続いたら、心療内科か精神科の受診を考えてください。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title"><img class="section__icon float" src="assets/img/t02/board.webp" alt="" width="512" height="512" loading="lazy">会社がしんどい時の、10の確認リスト</h2>
+    <p class="section__lead">当てはまる数で何かを決めるものではありません。確認できていない項目から見てください。</p>
+
+    <!-- 項目を足す時は <li> を1つコピーし、data-check に他と重ならない半角英数字の名前を付ける。
+         名前で保存しているので、途中に足しても、既存のチェックはずれない -->
+    <ul class="checklist">
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="change-2weeks"><span class="check__text">眠れない、朝起きられない、休みがち、のような変化が2週間前後続いていないか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="clinic"><span class="check__text">心療内科か精神科の予約先を、1か所知っているか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="paid-leave"><span class="check__text">有給休暇があと何日残っているか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="consult-company"><span class="check__text">業務量の調整や在宅など、今の会社で相談できることを知っているか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="consult-places"><span class="check__text">心の相談先(医師・産業医・こころの耳)と、職場の相談先(人事・総合労働相談コーナー)を分けて知っているか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="leave-limit"><span class="check__text">就業規則で、休職できる期間の上限を確認したか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="leave-end"><span class="check__text">休職期間が終わった時の扱い(復職か、退職か)を確認したか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="allowance-insurance"><span class="check__text">休む間の手当の条件と、休職中の社会保険料の払い方を、人事に確認したか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="after-retire"><span class="check__text">辞めると決める前に、退職後も手当を受け続ける条件(退職日に出勤しないなど)を知っているか</span></label></li>
+      <li><label class="check"><input class="check__box" type="checkbox" data-check="talk-someone"><span class="check__text">今の状態を、誰か一人に話したか</span></label></li>
+    </ul>
+
+    <div class="save-tools">
+      <span>チェックは自動で保存されます。</span>
+      <a href="backup.html">バックアップ</a>
+      <button class="btn btn--quiet" type="button" data-reset>チェックをすべて外す</button>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <p>※診断や休職の判断を示すものではありません。病気かどうか、休むべきかどうかは、医師が判断します。</p>
+    <p>※厚生労働省などの公的資料をもとに作成しています(2026年10月時点)。制度は変わることがあります。</p>
+  </div>
+
+  <nav class="pager" aria-label="特典の移動">
+    <a href="t01-map.html"><span>← 前の特典</span>選択肢の地図</a>
+    <a class="pager__next" href="t03-bunrei-mae.html"><span>次の特典 →</span>文例とメモ(受診・休む前)</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="site-footer__help">つらい気持ちが強い時は、一人で抱えず、<a href="https://kokoro.mhlw.go.jp/" target="_blank" rel="noopener">こころの耳(厚生労働省)</a>などをご利用ください。緊急の時は、119番や110番、近くの医療機関へ。</p>
+    <p class="site-footer__note">管理者(まもる)は、医師や専門家ではありません。診断、治療、個別の相談はできません。</p>
+    <nav class="site-footer__nav" aria-label="サイト内">
+      <a href="index.html">特典の一覧</a>
+      <a href="backup.html">バックアップと復元</a>
+    </nav>
+    <p class="site-footer__copy">© 2026 まもるworklife</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

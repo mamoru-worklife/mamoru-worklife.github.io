@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- まもるのアイコン(仮):緑の丸に、分かれ道のマーク -->
+  <circle cx="32" cy="32" r="32" fill="#3B7560"/>
+  <path d="M32 52V34M32 34L20 20M32 34L44 20" fill="none" stroke="#F7F5EF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44" cy="20" r="5" fill="#E59A4C"/>
+</svg>

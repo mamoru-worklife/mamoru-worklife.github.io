@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>バックアップと復元 | まもるの参加特典</title>
+<meta name="description" content="特典のチェックを控えておき、別のブラウザや機種変更の後に戻す方法です。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="index.html"><img src="favicon.svg" alt="" width="28" height="28">まもるの参加特典</a>
+    <a class="site-header__link" href="index.html">特典の一覧</a>
+  </div>
+</header>
+
+<main class="container">
+  <p id="notice-storage" class="notice" hidden>このブラウザでは、チェックを保存できません。Safari・Chromeの「プライベート」「シークレット」のモードでは保存できないことがあります。通常のモードで開いてください。</p>
+  <p id="notice-line" class="notice" hidden>LINEの中で開いています。LINEの中とSafari・Chromeでは、チェックが別々に保存されます。<a id="open-external" href="#">Safari・Chromeで開き直す</a></p>
+
+  <a class="back-link" href="index.html">← 特典の一覧へ</a>
+
+  <div class="page-head">
+    <h1 class="page-head__title">バックアップと復元</h1>
+    <p class="page-head__lead">チェックは、このブラウザの中だけに保存されています。別のブラウザで開いた時や、機種変更、ブラウザの履歴を消した時には見えなくなります。控えておくと、あとで戻せます。</p>
+  </div>
+
+  <!-- ===== 1 控える ===== -->
+  <section class="section">
+    <h2 class="section__title">1 今のチェックを控える</h2>
+    <p id="backup-empty" class="section__note" hidden>まだ保存されたチェックはありません。</p>
+
+    <div class="field">
+      <label class="field__label" for="backup-url">方法A 復元用URL(おすすめ)</label>
+      <input class="field__input" id="backup-url" type="text" readonly>
+      <div class="field__actions"><button class="btn btn--accent" type="button" data-copy="backup-url">URLをコピーする</button></div>
+      <ol class="steps-howto">
+        <li>URLをコピーして、LINEの自分だけのトークや、メモに貼っておきます。</li>
+        <li>戻したい時は、そのURLを開いて「復元する」を押します。</li>
+      </ol>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="backup-code">方法B バックアップコード</label>
+      <textarea class="field__input" id="backup-code" readonly></textarea>
+      <div class="field__actions"><button class="btn btn--ghost" type="button" data-copy="backup-code">コードをコピーする</button></div>
+      <p class="section__note">URLが開けない時は、このコードを下の「2 チェックを戻す」に貼り付けます。</p>
+    </div>
+  </section>
+
+  <!-- ===== 2 戻す ===== -->
+  <section class="section">
+    <h2 class="section__title">2 チェックを戻す</h2>
+    <div class="field">
+      <label class="field__label" for="restore-input">バックアップコードを貼り付けてください</label>
+      <textarea class="field__input" id="restore-input"></textarea>
+      <div class="field__actions"><button class="btn btn--accent" type="button" id="restore-btn">復元する</button></div>
+      <p id="restore-status" class="status" role="status" aria-live="polite"></p>
+      <p class="section__note">復元すると、コードに入っている特典のチェックは、コードの内容に置き換わります。</p>
+    </div>
+  </section>
+
+  <!-- ===== 3 消す ===== -->
+  <section class="section">
+    <h2 class="section__title">3 すべてのチェックを消す</h2>
+    <p class="section__lead">このブラウザに保存した、すべての特典のチェックを消します。</p>
+    <div class="field__actions"><button class="btn btn--quiet" type="button" id="clear-btn">すべて消す</button></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="site-footer__help">つらい気持ちが強い時は、一人で抱えず、<a href="https://kokoro.mhlw.go.jp/" target="_blank" rel="noopener">こころの耳(厚生労働省)</a>などをご利用ください。緊急の時は、119番や110番、近くの医療機関へ。</p>
+    <p class="site-footer__note">管理者(まもる)は、医師や専門家ではありません。診断、治療、個別の相談はできません。</p>
+    <nav class="site-footer__nav" aria-label="サイト内">
+      <a href="index.html">特典の一覧</a>
+      <a href="backup.html">バックアップと復元</a>
+    </nav>
+    <p class="site-footer__copy">© 2026 まもるworklife</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
