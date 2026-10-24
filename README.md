@@ -16,12 +16,17 @@
 
 ## GitHub Pages で公開する
 公開URL:https://mamoru-worklife.github.io/
-置き場所:Organization `mamoru-worklife` のリポジトリ `mamoru-worklife.github.io`(takenoco0201 でログインして管理。Settings → Pages は ブランチ `main`、フォルダ `/(root)`)
+置き場所:リポジトリ `mamoru-worklife/mamoru-worklife.github.io`(Settings → Pages は ブランチ `main`、フォルダ `/(root)`)
+このフォルダは GitHub Desktop で、上のリポジトリとつながっている。
 
-更新する時
-1. リポジトリのページで「Add file」→「Upload files」
-2. 直したファイルを、このフォルダと同じ場所にドラッグ&ドロップする(同じ名前のファイルは上書きされる)
-3. 「Commit changes」を押し、数分後に公開URLで確かめる
+更新する時(GitHub Desktop)
+1. このフォルダの中のファイルを直す
+2. GitHub Desktop の「Current repository」が `mamoru-worklife.github.io` になっているか確かめる
+3. 左下の「Summary」に、何を変えたかを書く(例:特典②の項目を直す)
+4. 「Commit to main」→ 上の「Push origin」を押す
+5. 数分後に公開URLで確かめる(古い見た目のままなら再読み込み)
+
+このREADMEも公開URLから見えるので、個人のアカウント名やメールアドレスは書かない。
 
 各HTMLの `og:url` と `og:image` は、公開URLの絶対URLにしている(LINEのプレビューは相対パスだと出ないことがある)。新しいページでも同じにする。
 
