@@ -7,7 +7,7 @@
 |---|---|
 | index.html | トップ(サムネイル一覧) |
 | join.html | オープンチャットの入口(Threadsのプロフィールのリンク用)。特典のページへはリンクしない |
-| t01-map.html 〜 t04-bunrei-kyushoku.html | 特典①〜④ |
+| t01-map.html 〜 t05-money.html | 特典①〜⑤ |
 | backup.html | チェックのバックアップと復元 |
 | assets/css/tokens.css | 色・文字・余白 |
 | assets/css/style.css | レイアウト |
