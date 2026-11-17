@@ -190,6 +190,13 @@ body {
 }
 .hero__cloud--1 { top: 8%; left: 6%; }
 .hero__cloud--2 { top: 22%; left: 58%; width: 24%; opacity: .85; }
+/* 低い帯のイラスト。PCは画面いっぱいの横幅になり、3:1のままだと背景だけで画面が埋まるため、高さを固定する(2026-11-17) */
+.hero--compact { aspect-ratio: auto; height: 72px; }
+.hero--compact .hero__bg { object-position: center 58%; }
+.hero--compact .hero__cloud { width: min(24%, 150px); }
+.hero--compact .hero__cloud--1 { top: 6%; left: 6%; }
+.hero--compact .hero__cloud--2 { top: 18%; left: 62%; width: min(16%, 110px); }
+@media (min-width: 640px) { .hero--compact { height: 104px; } }
 
 .intro { padding-top: var(--space-lg); }
 .intro__label {

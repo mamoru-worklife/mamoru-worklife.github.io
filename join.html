@@ -45,15 +45,6 @@
   .join-cta .btn { width: 100%; max-width: 420px; min-height: 56px; font-size: var(--fs-body); }
   .join-cta__note { margin-top: var(--space-sm); font-size: var(--fs-small); color: var(--color-text-muted); }
 
-  /* イラストは低い帯にする(2026-11-17 ここなさんの指摘)。
-     PCは画面いっぱいの横幅になり、3:1のままだと背景だけで画面が埋まるため、高さを固定する */
-  .hero--compact { aspect-ratio: auto; height: 72px; }
-  .hero--compact .hero__bg { object-position: center 58%; }
-  .hero--compact .hero__cloud { width: min(24%, 150px); }
-  .hero--compact .hero__cloud--1 { top: 6%; left: 6%; }
-  .hero--compact .hero__cloud--2 { top: 18%; left: 62%; width: min(16%, 110px); }
-  @media (min-width: 640px) { .hero--compact { height: 104px; } }
-
   /* チェック表の見本(特典⑤の最初の3項目をそのまま載せる) */
   .join-box__body { display: grid; gap: var(--space-md); margin-top: var(--space-sm); }
   .join-box__body .join-list { margin-top: 0; }
@@ -68,37 +59,6 @@
   .join-sample__label { margin-bottom: var(--space-xs); font-size: var(--fs-small); font-weight: 700; color: var(--color-primary); }
   .join-sample img { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); }
   .join-sample__note { margin-top: var(--space-xs); font-size: var(--fs-xs); color: var(--color-text-muted); }
-
-  /* タップで拡大(スマホでは画像の文字が小さいため)。JSが使えない時は、画像だけを別のタブで開く */
-  .join-sample__zoom { position: relative; display: block; cursor: zoom-in; border-radius: var(--radius-sm); }
-  .join-sample__hint {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-    background: rgba(43, 43, 40, .78);
-    color: #fff;
-    font-size: var(--fs-xs);
-    line-height: 1.4;
-    pointer-events: none;
-  }
-  @media (min-width: 640px) { .join-sample__hint { display: none; } }
-  .sample-dialog {
-    width: calc(100vw - 16px);
-    max-width: 760px;
-    padding: 0;
-    border: 0;
-    border-radius: var(--radius-md);
-    background: var(--color-surface);
-    color: var(--color-text);
-  }
-  .sample-dialog::backdrop { background: rgba(0, 0, 0, .6); }
-  .sample-dialog__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); padding: var(--space-xs) var(--space-md); border-bottom: 1px solid var(--color-border); }
-  .sample-dialog__help { font-size: var(--fs-xs); color: var(--color-text-muted); }
-  .sample-dialog__close { min-width: 72px; min-height: var(--tap-min); padding: 8px 16px; border: 0; border-radius: var(--radius-full); background: var(--color-primary); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
-  .sample-dialog__scroll { overflow: auto; max-height: calc(100vh - 110px); -webkit-overflow-scrolling: touch; background: var(--color-bg); }
-  .sample-dialog__scroll img { display: block; width: 708px; max-width: none; height: auto; }
 </style>
 </head>
 <body>
@@ -134,10 +94,7 @@
       <div class="join-box__body">
         <figure class="join-sample">
           <figcaption class="join-sample__label">お金のチェック表の見本(最初の部分)</figcaption>
-          <a class="join-sample__zoom" href="assets/img/join-sample.webp" target="_blank" rel="noopener" data-zoom>
-            <img src="assets/img/join-sample.webp" alt="お金のチェック表の画面。「休む前に、会社(人事)に確認すること」の見出しと、チェックを入れる3つの項目が並んでいる" width="708" height="274" loading="eager">
-            <span class="join-sample__hint" aria-hidden="true">タップで拡大</span>
-          </a>
+          <img src="assets/img/join-sample.webp" alt="お金のチェック表の画面。「休む前に、会社(人事)に確認すること」の見出しと、チェックを入れる3つの項目が並んでいる" width="708" height="274" loading="eager">
           <p class="join-sample__note">チェックを入れると、自動で保存されます。</p>
         </figure>
         <ul class="join-list">
@@ -163,28 +120,6 @@
     <p class="site-footer__copy">© 2026 まもるworklife</p>
   </div>
 </footer>
-
-<dialog class="sample-dialog" id="sample-dialog" aria-label="お金のチェック表の見本(拡大)">
-  <div class="sample-dialog__bar">
-    <span class="sample-dialog__help">横にスクロールできます</span>
-    <button class="sample-dialog__close" type="button" data-close>閉じる</button>
-  </div>
-  <div class="sample-dialog__scroll">
-    <img src="assets/img/join-sample.webp" alt="お金のチェック表の画面。「休む前に、会社(人事)に確認すること」の見出しと、チェックを入れる3つの項目が並んでいる" width="708" height="274">
-  </div>
-</dialog>
-
-<script>
-  // 見本の画像をタップすると、実物の大きさで拡大する。dialogが使えない端末では、画像だけを別のタブで開く
-  (function () {
-    var dlg = document.getElementById('sample-dialog');
-    var link = document.querySelector('[data-zoom]');
-    if (!dlg || !link || typeof dlg.showModal !== 'function') return;
-    link.addEventListener('click', function (e) { e.preventDefault(); dlg.showModal(); });
-    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-  })();
-</script>
 
 </body>
 </html>
